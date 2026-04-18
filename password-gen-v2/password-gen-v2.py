@@ -9,7 +9,7 @@ nr_symbols = int(input(f"How many symbols would you like?\n"))
 nr_numbers = int(input(f"How many numbers would you like?\n"))
 
 password = []
-for alph in range(1, nr_letters + 1):
+for alpha in range(1, nr_letters + 1):
     password.append(random.choice(letters))
 for symb in range(1, nr_symbols + 1):
     password.append(random.choice(symbols))
