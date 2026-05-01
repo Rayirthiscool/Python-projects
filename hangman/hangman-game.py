@@ -6,7 +6,6 @@ from hangman_art import stages , logo
 lives = 6
 
 print(logo)
-
 chosen_word = random.choice(word_list)
 
 placeholder = ""
