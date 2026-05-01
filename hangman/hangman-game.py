@@ -1,25 +1,56 @@
 import random
-word_list = ["aardvark", "baboon", "camel"]
+from hangman_words import word_list
+from hangman_art import stages , logo
+
+
+lives = 6
+
+print(logo)
 
 chosen_word = random.choice(word_list)
 print(chosen_word)
 
-# TODO-1: Create a "placeholder" with the same number of blanks as the chosen_word
-    
+placeholder = ""
+word_length = len(chosen_word)
+for position in range(word_length):
+    placeholder += "_"
+print("Word to guess: " + placeholder)
 
+game_over = False
+correct_letters = []
 
-guess = input("Guess a letter: ").lower()
+while not game_over:
 
-# TODO-2: Create a "display" that puts the guess letter in the right positions and _ in the rest of the string.
+    print(f"****************************{lives}/6 LIVES LEFT****************************")
+    guess = input("Guess a letter: ").lower()
 
-display = ""
+    if guess in correct_letters:
+        print(f"You've already guessed {guess}!")
 
-for letter in chosen_word:
-    if letter == guess:
-        display += letter
-    else:
-        display += "_"
+    display = ""
 
-print(display )
+    for letter in chosen_word:
+        if letter == guess:
+            display += letter
+            correct_letters.append(guess)
+        elif letter in correct_letters:
+            display += letter
+        else:
+            display += "_"
 
+    print("Word to guess: " + display)
 
+    if guess not in chosen_word:
+        lives -= 1
+        print (f"You guessed {guess}, that's not in the word. You lose a life.")
+
+        if lives == 0:
+            game_over = True
+
+            # TODO 7: - Update the print statement below to give the user the correct word they were trying to guess.
+            print(f"***********************IT WAS {chosen_word.upper()}, YOU LOSE**********************")
+
+    if "_" not in display:
+        game_over = True
+        print("****************************YOU WIN****************************")
+    print(stages[lives])
