@@ -1,11 +1,11 @@
-# 🐍 Python Projects
+# Python Projects
 
 A collection of my Python projects built while learning programming.
 This repository includes small games, utilities, and logic-based programs — each helping me improve my problem-solving and coding skills.
 
 ---
 
-## 🎮 Games
+## Games
 
 * **Hangman**
   A classic word guessing game.
@@ -18,7 +18,7 @@ This repository includes small games, utilities, and logic-based programs — ea
 
 ---
 
-## 🛠️ Utilities
+## Utilities
 
 * **Password Generator v2**
   Generates strong and random passwords.
@@ -28,7 +28,7 @@ This repository includes small games, utilities, and logic-based programs — ea
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 ### 1. Clone the repository
 
@@ -50,13 +50,9 @@ python main.py
 
 ---
 
-## 👤 Author
+## Author
 
 **Rayirthiscool**
 🔗 https://github.com/Rayirthiscool
 
 ---
-
-## ⭐ Support
-
-If you like this repo, drop a ⭐ — it motivates me to build more!
